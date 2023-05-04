@@ -125,7 +125,7 @@ class FilepondController extends BaseController
             ->put($basePath . DIRECTORY_SEPARATOR . 'patch.' . $offset, $request->getContent(), ['mimetype' => 'application/octet-stream']);
 
         $this->persistFileIfDone($disk, $basePath, $length, $finalFilePath);
-        
+
         return Response::make('', 204);
     }
 
